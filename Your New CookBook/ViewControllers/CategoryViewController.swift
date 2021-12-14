@@ -13,7 +13,7 @@ import UIKit
 
 class CategoryViewController: UIViewController {
 
-    @IBOutlet weak var tableView:   UITableView!
+    @IBOutlet var tableView:   UITableView!
    
     
     var category = [Category]()
@@ -26,7 +26,7 @@ class CategoryViewController: UIViewController {
         let nib = UINib(nibName: CategoryTableViewCell.identifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: CategoryTableViewCell.identifier)
         
-        self.tableView.backgroundColor  = UIColor.systemBackground
+        self.tableView.backgroundColor  = UIColor.systemPink
         self.tableView.isHidden         = true
         
        

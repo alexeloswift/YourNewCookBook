@@ -60,9 +60,15 @@
 		FD043A4A2766C574006E0F6B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FD1EA63F2765AEF2007A8F0C /* Main.storyboard */,
+				FD043A562766E1E7006E0F6B /* MealTableViewCell.swift */,
+				FD043A572766E1E7006E0F6B /* MealTableViewCell.xib */,
+				FD043A522766DDE7006E0F6B /* CategoryTableViewCell.swift */,
+				FD043A532766DDE7006E0F6B /* CategoryTableViewCell.xib */,
 				FD043A462766BC50006E0F6B /* CategoryViewController.swift */,
 				FD043A482766BC68006E0F6B /* MealViewController.swift */,
 				FD1EA63D2765AEF2007A8F0C /* MealDetailViewController.swift */,
+				FD043A5E2767115E006E0F6B /* UIViewController + Extension.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -81,11 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				FD043A5A27670D91006E0F6B /* Launch Screen.storyboard */,
-				FD1EA63F2765AEF2007A8F0C /* Main.storyboard */,
-				FD043A562766E1E7006E0F6B /* MealTableViewCell.swift */,
-				FD043A572766E1E7006E0F6B /* MealTableViewCell.xib */,
-				FD043A522766DDE7006E0F6B /* CategoryTableViewCell.swift */,
-				FD043A532766DDE7006E0F6B /* CategoryTableViewCell.xib */,
 				FD1EA6382765AEF2007A8F0C /* Your New CookBook */,
 				FD1EA6372765AEF2007A8F0C /* Products */,
 			);
@@ -106,7 +107,6 @@
 				FD043A4A2766C574006E0F6B /* ViewControllers */,
 				FD043A442766A840006E0F6B /* Models.swift */,
 				FD043A422765CF58006E0F6B /* APICaller.swift */,
-				FD043A5E2767115E006E0F6B /* UIViewController + Extension.swift */,
 				FD1EA6422765AEF2007A8F0C /* Assets.xcassets */,
 				FD1EA6472765AEF2007A8F0C /* Info.plist */,
 			);

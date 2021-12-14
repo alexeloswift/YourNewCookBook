@@ -15,8 +15,8 @@ class MealDetailsViewController: UIViewController {
     @IBOutlet weak var detailTitleLabel:    UILabel!
     @IBOutlet weak var instructionsLabel:   UILabel!
     @IBOutlet weak var ingredientsLabel:    UILabel!
-    @IBOutlet weak var scrollFooterLabel:   UILabel!
-    @IBOutlet weak var divider:             UIView!
+    
+   
     
     var item = [MealDetails]()
     
@@ -32,8 +32,6 @@ class MealDetailsViewController: UIViewController {
         self.detailTitleLabel.isHidden  = true
         self.instructionsLabel.isHidden = true
         self.ingredientsLabel.isHidden  = true
-        self.scrollFooterLabel.isHidden = true
-        self.divider.isHidden           = true
         
         detailTitleLabel.numberOfLines  = 0
         instructionsLabel.numberOfLines = 0
@@ -97,8 +95,6 @@ class MealDetailsViewController: UIViewController {
             self.detailTitleLabel.isHidden  = false
             self.instructionsLabel.isHidden = false
             self.ingredientsLabel.isHidden  = false
-            self.scrollFooterLabel.isHidden = false
-            self.divider.isHidden           = false
         }
     }
     
