@@ -22,9 +22,9 @@ class MealTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setup(subcategory: Meal) {
-        mealTitleLabel.text = subcategory.strMeal
-        downloadImage(fromURL: subcategory.strMealThumb)
+    func setup(meal: Meal) {
+        mealTitleLabel.text = meal.strMeal
+        downloadImage(fromURL: meal.strMealThumb)
     }
     
     func downloadImage(fromURL url: String) {

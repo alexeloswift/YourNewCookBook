@@ -9,40 +9,41 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealTableViewCell" rowHeight="102" id="KGk-i7-Jjw" customClass="MealTableViewCell" customModule="Your_New_CookBook" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="292" height="102"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealTableViewCell" rowHeight="95" id="KGk-i7-Jjw" customClass="MealTableViewCell" customModule="Your_New_CookBook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="292" height="102"/>
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="MealTableViewCell" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="MealTableViewCell" customModule="Your_New_CookBook" customModuleProvider="target">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uxf-m4-o89">
-                        <rect key="frame" x="210" y="14" width="75" height="75"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8WZ-bc-sv1">
+                        <rect key="frame" x="235" y="10" width="75" height="60"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="75" id="Coo-7H-vzc"/>
+                            <constraint firstAttribute="width" constant="75" id="0dd-Kf-Fjc"/>
+                            <constraint firstAttribute="height" constant="60" id="QmT-ta-3ym"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CK6-JI-Je1">
-                        <rect key="frame" x="16" y="32" width="142" height="39"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mK-nO-jp1">
+                        <rect key="frame" x="10" y="10" width="215" height="60"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="CK6-JI-Je1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-23" id="0Cs-84-Vh6"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="uxf-m4-o89" secondAttribute="trailing" constant="-9" id="Gmn-Cq-MrP"/>
-                    <constraint firstItem="uxf-m4-o89" firstAttribute="leading" secondItem="CK6-JI-Je1" secondAttribute="trailing" constant="52" id="JJA-go-4jF"/>
-                    <constraint firstItem="CK6-JI-Je1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Ohg-1D-q8h"/>
-                    <constraint firstItem="uxf-m4-o89" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-41" id="mil-1i-9PW"/>
-                    <constraint firstItem="uxf-m4-o89" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="pWb-ep-P9B"/>
-                    <constraint firstItem="CK6-JI-Je1" firstAttribute="centerY" secondItem="uxf-m4-o89" secondAttribute="centerY" id="vXm-nm-C63"/>
+                    <constraint firstAttribute="bottom" secondItem="8WZ-bc-sv1" secondAttribute="bottom" constant="10" id="4tN-Ad-QXc"/>
+                    <constraint firstItem="8WZ-bc-sv1" firstAttribute="leading" secondItem="6mK-nO-jp1" secondAttribute="trailing" constant="10" id="KxK-78-4oi"/>
+                    <constraint firstItem="8WZ-bc-sv1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="LCF-bX-TUX"/>
+                    <constraint firstItem="6mK-nO-jp1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="eut-23-Wc2"/>
+                    <constraint firstItem="6mK-nO-jp1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="men-aE-NXR"/>
+                    <constraint firstAttribute="bottom" secondItem="6mK-nO-jp1" secondAttribute="bottom" constant="10" id="r1B-t1-X9o"/>
+                    <constraint firstAttribute="trailing" secondItem="8WZ-bc-sv1" secondAttribute="trailing" constant="10" id="yHP-ua-UM4"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="mealImageView" destination="uxf-m4-o89" id="zzV-e5-p5e"/>
-                <outlet property="mealTitleLabel" destination="CK6-JI-Je1" id="qP2-P3-Z78"/>
+                <outlet property="mealImageView" destination="8WZ-bc-sv1" id="Vl8-NW-xzm"/>
+                <outlet property="mealTitleLabel" destination="6mK-nO-jp1" id="Rdy-Xp-isb"/>
             </connections>
             <point key="canvasLocation" x="15.942028985507248" y="68.303571428571431"/>
         </tableViewCell>

@@ -28,7 +28,7 @@ class MealViewController: UIViewController {
         let nib = UINib(nibName: MealTableViewCell.identifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: MealTableViewCell.identifier)
         
-        self.tableView.backgroundColor  = UIColor.black
+        self.tableView.backgroundColor  = UIColor.systemBackground
         self.tableView.isHidden         = true
         
        
@@ -70,7 +70,7 @@ extension MealViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MealTableViewCell.identifier, for: indexPath) as! MealTableViewCell
         
-        cell.setup(subcategory: meal[indexPath.row])
+        cell.setup(meal: meal[indexPath.row])
         
         return cell
     }
