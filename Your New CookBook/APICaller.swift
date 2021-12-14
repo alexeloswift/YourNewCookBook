@@ -12,8 +12,8 @@ import UIKit
 enum ErrorMessages: String, Error {
     case invalidURL         = "Invalid URL"
     case unableToComplete   = "You should check your connection"
-    case invalidResponse    = "Invalid response from server."
-    case invalidData        = "The data recieved from server is invalid."
+    case invalidResponse    = "Invalid response from server"
+    case invalidData        = "The data recieved from server is invalid"
 }
 
 class APICaller {
