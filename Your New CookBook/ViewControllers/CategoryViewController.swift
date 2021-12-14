@@ -15,10 +15,7 @@ class CategoryViewController: UIViewController {
 
     @IBOutlet var tableView:   UITableView!
    
-    
     var category = [Category]()
-    
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +25,6 @@ class CategoryViewController: UIViewController {
         
         self.tableView.backgroundColor  = UIColor.systemBackground
         self.tableView.isHidden         = true
-        
-       
-        
-        
         
         APICaller.shared.getCategories() { [weak self] result  in
             guard let self = self else { return }

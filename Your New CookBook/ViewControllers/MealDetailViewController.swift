@@ -25,20 +25,20 @@ class MealDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title                      = "Recipe"
+        self.title = "Recipe"
        
         
-        self.detailImageView.isHidden   = true
-        self.detailTitleLabel.isHidden  = true
+        self.detailImageView.isHidden = true
+        self.detailTitleLabel.isHidden = true
         self.instructionsLabel.isHidden = true
-        self.ingredientsLabel.isHidden  = true
+        self.ingredientsLabel.isHidden = true
         
-        detailTitleLabel.numberOfLines  = 0
+        detailTitleLabel.numberOfLines = 0
         instructionsLabel.numberOfLines = 0
-        ingredientsLabel.numberOfLines  = 0
+        ingredientsLabel.numberOfLines = 0
         
-        detailImageView.layer.cornerRadius  = 10
-        detailImageView.clipsToBounds       = true
+        detailImageView.layer.cornerRadius = 10
+        detailImageView.clipsToBounds = true
 
         APICaller.shared.getMealDetails(for: mealID) { [weak self] result in
             guard let self = self else { return }

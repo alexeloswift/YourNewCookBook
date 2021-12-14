@@ -10,8 +10,8 @@ import UIKit
 
 
 enum ErrorMessages: String, Error {
-    case invalidURL         = "Check your endpoint."
-    case unableToComplete   = "Check your connection."
+    case invalidURL         = "Invalid URL"
+    case unableToComplete   = "You should check your connection"
     case invalidResponse    = "Invalid response from server."
     case invalidData        = "The data recieved from server is invalid."
 }
@@ -20,14 +20,14 @@ class APICaller {
     
   static let shared = APICaller()
     
-    let baseURL = "https://www.themealdb.com/api/json/v1/1/"
+    let mainURL = "https://www.themealdb.com/api/json/v1/1/"
     let cache   = NSCache<NSString, UIImage>()
     
     private init() {}
     
   
     func getCategories(completed: @escaping (Result<CategoryAPIResponse, ErrorMessages>) -> Void) {
-        let endpoint = baseURL + "categories.php"
+        let endpoint = mainURL + "categories.php"
         
         guard let url = URL(string: endpoint) else {
             completed(.failure(.invalidURL))
@@ -62,9 +62,9 @@ class APICaller {
         task.resume()
     }
     
-    // MARK: for fetching the list of meals in a category
+    
     func getMeals(for category: String, completed: @escaping (Result<MealAPIResponse, ErrorMessages>) -> Void) {
-        let endpoint = baseURL + "filter.php?c=\(category)"
+        let endpoint = mainURL + "filter.php?c=\(category)"
         
         guard let url = URL(string: endpoint) else {
             completed(.failure(.invalidURL))
@@ -100,9 +100,9 @@ class APICaller {
         task.resume()
     }
     
-    // MARK: for fetching the meal details by its ID
+   
     func getMealDetails(for mealID: String, completed: @escaping (Result<MealDetailsAPIResponse, ErrorMessages>) -> Void) {
-        let endpoint = baseURL + "lookup.php?i=\(mealID)"
+        let endpoint = mainURL + "lookup.php?i=\(mealID)"
         
         guard let url = URL(string: endpoint) else {
             completed(.failure(.invalidURL))
@@ -138,7 +138,7 @@ class APICaller {
         task.resume()
     }
     
-    // MARK: Getting the image
+    
     func downloadImage(from urlString: String, completed: @escaping (UIImage?) -> Void) {
         let cacheKey = NSString(string: urlString)
         

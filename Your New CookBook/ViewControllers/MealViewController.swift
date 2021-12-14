@@ -15,12 +15,8 @@ class MealViewController: UIViewController {
 
     @IBOutlet weak var tableView:   UITableView!
     
-    
     var meal = [Meal]()
-    
     var category: String = ""
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +27,6 @@ class MealViewController: UIViewController {
         self.tableView.backgroundColor  = UIColor.systemBackground
         self.tableView.isHidden         = true
         
-       
-        
-       
-
         APICaller.shared.getMeals(for: category) { [weak self] result in
             guard let self = self else { return }
             switch result {
