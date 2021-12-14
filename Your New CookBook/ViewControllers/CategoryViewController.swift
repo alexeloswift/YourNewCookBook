@@ -26,7 +26,7 @@ class CategoryViewController: UIViewController {
         let nib = UINib(nibName: CategoryTableViewCell.identifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: CategoryTableViewCell.identifier)
         
-        self.tableView.backgroundColor  = UIColor.systemPink
+        self.tableView.backgroundColor  = UIColor.systemBackground
         self.tableView.isHidden         = true
         
        
@@ -75,6 +75,7 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
         category.sort{ $0.strCategory < $1.strCategory }
         
         cell.setup(category: category[indexPath.row])
+        
 
         return cell
     }

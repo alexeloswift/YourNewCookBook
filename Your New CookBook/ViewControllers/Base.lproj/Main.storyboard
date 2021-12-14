@@ -8,47 +8,99 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--CategoryViewController-->
-        <scene sceneID="0Yh-g0-K9j">
+        <!--MainNavigationViewController-->
+        <scene sceneID="2gN-Cm-BtI">
             <objects>
-                <tableViewController title="CategoryViewController" id="UcY-tL-JlR" customClass="CatregoyViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="qWb-wm-onU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <connections>
-                            <outlet property="dataSource" destination="UcY-tL-JlR" id="1f9-t7-0lj"/>
-                            <outlet property="delegate" destination="UcY-tL-JlR" id="YUD-UW-3GR"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="CookBook" id="49N-vK-JXU"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iDo-Jf-d1t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="MainNavigationViewController" title="MainNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="Mwb-qR-vlT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="VUx-Rs-heb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lrg-fH-GWY" kind="relationship" relationship="rootViewController" id="FvY-ha-tMK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Anj-2j-mY5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="444.92753623188412" y="97.767857142857139"/>
+            <point key="canvasLocation" x="-301" y="100"/>
+        </scene>
+        <!--CategoryViewController-->
+        <scene sceneID="K6T-Kf-QpZ">
+            <objects>
+                <viewController storyboardIdentifier="CategoryViewController" title="CategoryViewController" id="lrg-fH-GWY" customClass="CategoryViewController" customModule="Your_New_CookBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KgS-ds-sJe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IyN-p4-TxO">
+                                <rect key="frame" x="0.0" y="40" width="414" height="856"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="lrg-fH-GWY" id="z0w-s2-BEQ"/>
+                                    <outlet property="delegate" destination="lrg-fH-GWY" id="I3c-cr-lGU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Luz-AN-H27"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IyN-p4-TxO" firstAttribute="leading" secondItem="Luz-AN-H27" secondAttribute="leading" id="8pq-Ad-Zvn"/>
+                            <constraint firstAttribute="bottom" secondItem="IyN-p4-TxO" secondAttribute="bottom" id="B8D-70-dRz"/>
+                            <constraint firstItem="IyN-p4-TxO" firstAttribute="trailing" secondItem="Luz-AN-H27" secondAttribute="trailing" id="xyn-xp-oz3"/>
+                            <constraint firstItem="IyN-p4-TxO" firstAttribute="top" secondItem="KgS-ds-sJe" secondAttribute="top" id="yB2-M1-wg7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="CookBook" id="b6a-Jz-k6K"/>
+                    <connections>
+                        <outlet property="tableView" destination="IyN-p4-TxO" id="djX-O3-eXw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdK-u2-aLb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="456.52173913043481" y="99.776785714285708"/>
         </scene>
         <!--MealViewController-->
-        <scene sceneID="XPs-Ii-ACP">
+        <scene sceneID="jn6-9c-a10">
             <objects>
-                <tableViewController title="MealViewController" id="q1R-DF-zww" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="MfP-go-W8W">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WxS-qR-T2J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="MealViewController" title="MealViewController" id="rEJ-1K-VrD" customClass="MealViewController" customModule="Your_New_CookBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y24-yY-5JB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lM4-u6-1Jr">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="rEJ-1K-VrD" id="maG-mA-zK9"/>
+                                    <outlet property="delegate" destination="rEJ-1K-VrD" id="VvE-ed-l5Q"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="R7t-pS-wIr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <connections>
-                            <outlet property="dataSource" destination="q1R-DF-zww" id="6Gw-j1-6dL"/>
-                            <outlet property="delegate" destination="q1R-DF-zww" id="VUn-xt-wyB"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vel-ii-lD8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lM4-u6-1Jr" secondAttribute="trailing" constant="-13" id="4dL-4p-9E3"/>
+                            <constraint firstItem="lM4-u6-1Jr" firstAttribute="top" secondItem="Y24-yY-5JB" secondAttribute="top" id="E2t-ts-tIN"/>
+                            <constraint firstAttribute="bottom" secondItem="lM4-u6-1Jr" secondAttribute="bottom" id="QvV-IC-BJJ"/>
+                            <constraint firstItem="lM4-u6-1Jr" firstAttribute="leading" secondItem="R7t-pS-wIr" secondAttribute="leading" id="pP5-Ek-ldK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="lM4-u6-1Jr" id="twa-wX-vbr"/>
+                    </connections>
+                </viewController>
             </objects>
-            <point key="canvasLocation" x="1158" y="100"/>
+            <point key="canvasLocation" x="1173.913043478261" y="99.776785714285708"/>
         </scene>
         <!--MealDetailsViewController-->
         <scene sceneID="T1z-JF-JRc">
             <objects>
-                <viewController title="MealDetailsViewController" id="syb-oO-ogr" customClass="MealDetailsViewController" customModule="Your_New_CookBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MealDetailsViewController" title="MealDetailsViewController" id="syb-oO-ogr" customClass="MealDetailsViewController" customModule="Your_New_CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ueo-kn-ex0" customClass="UIScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,26 +162,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cen-6M-hsN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1938" y="98"/>
-        </scene>
-        <!--MainViewController-->
-        <scene sceneID="2gN-Cm-BtI">
-            <objects>
-                <navigationController title="MainViewController" automaticallyAdjustsScrollViewInsets="NO" id="Mwb-qR-vlT" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="VUx-Rs-heb">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" systemColor="systemGray2Color"/>
-                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="UcY-tL-JlR" kind="relationship" relationship="rootViewController" id="jvf-AG-W1G"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Anj-2j-mY5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-301" y="100"/>
         </scene>
     </scenes>
     <resources>
