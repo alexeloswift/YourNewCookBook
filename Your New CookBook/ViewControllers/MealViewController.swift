@@ -38,7 +38,7 @@ class MealViewController: UIViewController {
         APICaller.shared.getMeals(for: category) { [weak self] result in
             guard let self = self else { return }
             switch result {
-            case .success(let subcategory): self.updateUI(with: subcategory)
+            case .success(let meals): self.updateUI(with: meals)
             case .failure(let error): print(error.localizedDescription)
             }
         }
@@ -77,6 +77,9 @@ extension MealViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundColor = UIColor.clear
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
     
 }

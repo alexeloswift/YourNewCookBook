@@ -37,10 +37,10 @@ class MealDetailsViewController: UIViewController {
         instructionsLabel.numberOfLines = 0
         ingredientsLabel.numberOfLines  = 0
         
-        detailImageView.layer.cornerRadius  = (detailImageView?.frame.size.width)! / 2
+        detailImageView.layer.cornerRadius  = 5
         detailImageView.clipsToBounds       = true
-        detailImageView?.layer.borderWidth  = 3.0
-        detailImageView?.layer.borderColor  = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+        detailImageView?.layer.borderWidth  = 2.0
+        detailImageView?.layer.borderColor  = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
 
         APICaller.shared.getMealDetails(for: mealID) { [weak self] result in
             guard let self = self else { return }
@@ -58,12 +58,12 @@ class MealDetailsViewController: UIViewController {
         DispatchQueue.main.async {
             self.item                   = meal.meals
             self.detailTitleLabel.text  = self.item.first?.strMeal
-            self.instructionsLabel.text = "Instructions: \n---------------\n\(self.item.first?.strInstructions ?? "")"
+            self.instructionsLabel.text = "Instructions: \(self.item.first?.strInstructions ?? "")"
             self.downloadImage(fromURL: self.item.first?.strMealThumb ?? "missing")
             
             var getIngredients =
                 """
-                Ingredients: \n---------------
+                Ingredients:
                 \(self.item.first?.strIngredient1 ?? "") \(self.item.first?.strMeasure1 ?? ""), \
                 \(self.item.first?.strIngredient2 ?? "") \(self.item.first?.strMeasure2 ?? ""), \
                 \(self.item.first?.strIngredient3 ?? "") \(self.item.first?.strMeasure3 ?? ""), \

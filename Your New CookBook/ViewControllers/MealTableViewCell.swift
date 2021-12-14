@@ -26,7 +26,10 @@ class MealTableViewCell: UITableViewCell {
         mealTitleLabel.text = meal.strMeal
         downloadImage(fromURL: meal.strMealThumb)
     }
-    
+    override func prepareForReuse() {
+        mealImageView.image = nil
+        mealTitleLabel.text = ""
+    }
     func downloadImage(fromURL url: String) {
         APICaller.shared.downloadImage(from: url) { [weak self] image in
             guard let self = self else { return }

@@ -26,7 +26,10 @@ class CategoryTableViewCell: UITableViewCell {
         categoryTitleLabel.text = category.strCategory
         downloadImage(fromURL: category.strCategoryThumb)
     }
-    
+    override func prepareForReuse() {
+        categoryImageView.image = nil
+        categoryTitleLabel.text = ""
+    }
     func downloadImage(fromURL url: String) {
         APICaller.shared.downloadImage(from: url) { [weak self] image in
             guard let self = self else { return }
