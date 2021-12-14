@@ -37,10 +37,8 @@ class MealDetailsViewController: UIViewController {
         instructionsLabel.numberOfLines = 0
         ingredientsLabel.numberOfLines  = 0
         
-        detailImageView.layer.cornerRadius  = 5
+        detailImageView.layer.cornerRadius  = 10
         detailImageView.clipsToBounds       = true
-        detailImageView?.layer.borderWidth  = 2.0
-        detailImageView?.layer.borderColor  = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
 
         APICaller.shared.getMealDetails(for: mealID) { [weak self] result in
             guard let self = self else { return }
@@ -91,10 +89,10 @@ class MealDetailsViewController: UIViewController {
             }
             self.ingredientsLabel.text = getIngredients + "."
             
-            self.detailImageView.isHidden   = false
-            self.detailTitleLabel.isHidden  = false
+            self.detailImageView.isHidden = false
+            self.detailTitleLabel.isHidden = false
             self.instructionsLabel.isHidden = false
-            self.ingredientsLabel.isHidden  = false
+            self.ingredientsLabel.isHidden = false
         }
     }
     
@@ -106,5 +104,8 @@ class MealDetailsViewController: UIViewController {
             }
         }
     }
+    
+
+    
     
 }

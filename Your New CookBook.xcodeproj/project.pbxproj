@@ -16,7 +16,6 @@
 		FD043A582766E1E7006E0F6B /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD043A562766E1E7006E0F6B /* MealTableViewCell.swift */; };
 		FD043A592766E1E7006E0F6B /* MealTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD043A572766E1E7006E0F6B /* MealTableViewCell.xib */; };
 		FD043A5B27670D91006E0F6B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD043A5A27670D91006E0F6B /* Launch Screen.storyboard */; };
-		FD043A5D27671111006E0F6B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD043A5C27671111006E0F6B /* Reachability.swift */; };
 		FD043A5F2767115E006E0F6B /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD043A5E2767115E006E0F6B /* UIViewController + Extension.swift */; };
 		FD1EA63A2765AEF2007A8F0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1EA6392765AEF2007A8F0C /* AppDelegate.swift */; };
 		FD1EA63C2765AEF2007A8F0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1EA63B2765AEF2007A8F0C /* SceneDelegate.swift */; };
@@ -35,7 +34,6 @@
 		FD043A562766E1E7006E0F6B /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		FD043A572766E1E7006E0F6B /* MealTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealTableViewCell.xib; sourceTree = "<group>"; };
 		FD043A5A27670D91006E0F6B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		FD043A5C27671111006E0F6B /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		FD043A5E2767115E006E0F6B /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		FD1EA6362765AEF2007A8F0C /* Your New CookBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Your New CookBook.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1EA6392765AEF2007A8F0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,7 +74,6 @@
 		FD043A4B2766C5D1006E0F6B /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				FD043A5C27671111006E0F6B /* Reachability.swift */,
 				FD1EA6392765AEF2007A8F0C /* AppDelegate.swift */,
 				FD1EA63B2765AEF2007A8F0C /* SceneDelegate.swift */,
 			);
@@ -195,7 +192,6 @@
 				FD043A582766E1E7006E0F6B /* MealTableViewCell.swift in Sources */,
 				FD043A472766BC50006E0F6B /* CategoryViewController.swift in Sources */,
 				FD043A452766A840006E0F6B /* Models.swift in Sources */,
-				FD043A5D27671111006E0F6B /* Reachability.swift in Sources */,
 				FD043A542766DDE7006E0F6B /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
