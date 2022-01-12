@@ -26,7 +26,7 @@ class CategoryViewController: UIViewController {
         self.tableView.backgroundColor  = UIColor.systemBackground
         self.tableView.isHidden         = true
         
-        APICaller.shared.getCategories() { [weak self] result  in
+        NetworkManager.shared.getCategories() { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let categories):
@@ -47,6 +47,10 @@ class CategoryViewController: UIViewController {
     }
 
 }
+
+
+
+
 
 extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
     

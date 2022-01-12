@@ -9,39 +9,21 @@ import Foundation
 import UIKit
 
 
-enum ErrorMessages: Error {
-    case invalidURL
-    case unableToComplete
-    case invalidResponse
-    case invalidData
-}
-extension ErrorMessages: LocalizedError {
-    var errorDescription: String? {
-        switch self {
-        case .invalidURL:
-            return "Invalid URL"
-        case .unableToComplete:
-            return "You should check your connection"
-        case .invalidResponse:
-            return "Invalid response from server"
-        case .invalidData:
-            return "The data recieved from server is invalid"
-        }
-    }
-}
 
-class APICaller {
+
+class NetworkManager {
     
-  static let shared = APICaller()
+  static let shared = NetworkManager()
     
-    let mainURL = "https://www.themealdb.com/api/json/v1/1/"
-    let cache   = NSCache<NSString, UIImage>()
+    private let baseURL = "https://www.themealdb.com/api/json/v1/1/"
+    private let cache   = NSCache<NSString, UIImage>()
     
     private init() {}
     
   
     func getCategories(completed: @escaping (Result<CategoryAPIResponse, ErrorMessages>) -> Void) {
-        let endpoint = mainURL + "categories.php"
+        
+        let endpoint = baseURL + "categories.php"
         
         guard let url = URL(string: endpoint) else {
             completed(.failure(.invalidURL))
@@ -78,7 +60,7 @@ class APICaller {
     
     
     func getMeals(for category: String, completed: @escaping (Result<MealAPIResponse, ErrorMessages>) -> Void) {
-        let endpoint = mainURL + "filter.php?c=\(category)"
+        let endpoint = baseURL + "filter.php?c=\(category)"
         
         guard let url = URL(string: endpoint) else {
             completed(.failure(.invalidURL))
@@ -116,7 +98,7 @@ class APICaller {
     
    
     func getMealDetails(for mealID: String, completed: @escaping (Result<MealDetailsAPIResponse, ErrorMessages>) -> Void) {
-        let endpoint = mainURL + "lookup.php?i=\(mealID)"
+        let endpoint = baseURL + "lookup.php?i=\(mealID)"
         
         guard let url = URL(string: endpoint) else {
             completed(.failure(.invalidURL))

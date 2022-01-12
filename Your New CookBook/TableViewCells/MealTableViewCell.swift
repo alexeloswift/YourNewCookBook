@@ -31,7 +31,7 @@ class MealTableViewCell: UITableViewCell {
         mealTitleLabel.text = ""
     }
     func downloadImage(fromURL url: String) {
-        APICaller.shared.downloadImage(from: url) { [weak self] image in
+        NetworkManager.shared.downloadImage(from: url) { [weak self] image in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.mealImageView.image = image

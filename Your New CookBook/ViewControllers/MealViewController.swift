@@ -27,7 +27,7 @@ class MealViewController: UIViewController {
         self.tableView.backgroundColor  = UIColor.systemBackground
         self.tableView.isHidden         = true
         
-        APICaller.shared.getMeals(for: category) { [weak self] result in
+        NetworkManager.shared.getMeals(for: category) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let meals): self.updateUI(with: meals)

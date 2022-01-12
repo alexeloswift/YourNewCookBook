@@ -39,18 +39,20 @@ class MealDetailsViewController: UIViewController {
         
         detailImageView.layer.cornerRadius = 10
         detailImageView.clipsToBounds = true
-
-        APICaller.shared.getMealDetails(for: mealID) { [weak self] result in
-            guard let self = self else { return }
-            switch result {
-            case .success(let meal):
-                self.addMealInfo(meal: meal)
-                
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
+    
+    
+    NetworkManager.shared.getMealDetails(for: mealID) { [weak self] result in
+        guard let self = self else { return }
+        switch result {
+        case .success(let meal):
+            self.addMealInfo(meal: meal)
+            
+        case .failure(let error):
+            print(error.localizedDescription)
         }
     }
+}
+       
     
     func addMealInfo(meal: MealDetailsAPIResponse) {
         DispatchQueue.main.async {
@@ -95,9 +97,9 @@ class MealDetailsViewController: UIViewController {
             self.ingredientsLabel.isHidden = false
         }
     }
-    
+       
     func downloadImage(fromURL url: String) {
-        APICaller.shared.downloadImage(from: url) { [weak self] image in
+        NetworkManager.shared.downloadImage(from: url) { [weak self] image in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.detailImageView.image = image
@@ -106,6 +108,6 @@ class MealDetailsViewController: UIViewController {
     }
     
 
-    
-    
 }
+    
+
