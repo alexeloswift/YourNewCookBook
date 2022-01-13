@@ -41,16 +41,16 @@ class MealDetailsViewController: UIViewController {
         detailImageView.clipsToBounds = true
     
     
-    NetworkManager.shared.getMealDetails(for: mealID) { [weak self] result in
-        guard let self = self else { return }
-        switch result {
-        case .success(let meal):
-            self.addMealInfo(meal: meal)
-            
-        case .failure(let error):
-            print(error.localizedDescription)
-        }
-    }
+//    NetworkManagerWithGenerics.shared.getMealDetails(for: mealID) { [weak self] result in
+//        guard let self = self else { return }
+//        switch result {
+//        case .success(let meal):
+//            self.addMealInfo(meal: meal)
+//            
+//        case .failure(let error):
+//            print(error.localizedDescription)
+//        }
+//    }
 }
        
     
@@ -99,12 +99,12 @@ class MealDetailsViewController: UIViewController {
     }
        
     func downloadImage(fromURL url: String) {
-        NetworkManager.shared.downloadImage(from: url) { [weak self] image in
-            guard let self = self else { return }
-            DispatchQueue.main.async {
-                self.detailImageView.image = image
-            }
-        }
+//        NetworkManager.shared.downloadImage(from: url) { [weak self] image in
+//            guard let self = self else { return }
+//            DispatchQueue.main.async {
+//                self.detailImageView.image = image
+//            }
+//        }
     }
     
 

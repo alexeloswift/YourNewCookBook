@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FD043A432765CF58006E0F6B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD043A422765CF58006E0F6B /* NetworkManager.swift */; };
 		FD043A472766BC50006E0F6B /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD043A462766BC50006E0F6B /* CategoryViewController.swift */; };
 		FD043A492766BC68006E0F6B /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD043A482766BC68006E0F6B /* MealViewController.swift */; };
 		FD043A542766DDE7006E0F6B /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD043A522766DDE7006E0F6B /* CategoryTableViewCell.swift */; };
@@ -25,10 +24,11 @@
 		FD4C7263278FDA9D00C246B4 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C7262278FDA9D00C246B4 /* CategoryModel.swift */; };
 		FD4C7265278FDABE00C246B4 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C7264278FDABE00C246B4 /* MealModel.swift */; };
 		FD4C7267278FDAD700C246B4 /* MealDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C7266278FDAD700C246B4 /* MealDetailsModel.swift */; };
+		FD4C72762790975600C246B4 /* NetworkManagerWithGenerics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C72752790975600C246B4 /* NetworkManagerWithGenerics.swift */; };
+		FD4C727827909D1200C246B4 /* MealDBEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C727727909D1200C246B4 /* MealDBEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FD043A422765CF58006E0F6B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FD043A462766BC50006E0F6B /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		FD043A482766BC68006E0F6B /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
 		FD043A522766DDE7006E0F6B /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -48,6 +48,8 @@
 		FD4C7262278FDA9D00C246B4 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		FD4C7264278FDABE00C246B4 /* MealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
 		FD4C7266278FDAD700C246B4 /* MealDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsModel.swift; sourceTree = "<group>"; };
+		FD4C72752790975600C246B4 /* NetworkManagerWithGenerics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerWithGenerics.swift; sourceTree = "<group>"; };
+		FD4C727727909D1200C246B4 /* MealDBEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +148,8 @@
 		FD4C725D278F53CC00C246B4 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				FD043A422765CF58006E0F6B /* NetworkManager.swift */,
+				FD4C72752790975600C246B4 /* NetworkManagerWithGenerics.swift */,
+				FD4C727727909D1200C246B4 /* MealDBEndpoint.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -244,14 +247,15 @@
 				FD4C7267278FDAD700C246B4 /* MealDetailsModel.swift in Sources */,
 				FD4C7263278FDA9D00C246B4 /* CategoryModel.swift in Sources */,
 				FD1EA63E2765AEF2007A8F0C /* MealDetailViewController.swift in Sources */,
+				FD4C72762790975600C246B4 /* NetworkManagerWithGenerics.swift in Sources */,
 				FD1EA63A2765AEF2007A8F0C /* AppDelegate.swift in Sources */,
 				FD1EA63C2765AEF2007A8F0C /* SceneDelegate.swift in Sources */,
 				FD043A492766BC68006E0F6B /* MealViewController.swift in Sources */,
-				FD043A432765CF58006E0F6B /* NetworkManager.swift in Sources */,
 				FD043A582766E1E7006E0F6B /* MealTableViewCell.swift in Sources */,
 				FD043A472766BC50006E0F6B /* CategoryViewController.swift in Sources */,
 				FD4C7265278FDABE00C246B4 /* MealModel.swift in Sources */,
 				FD4C7260278F55E200C246B4 /* NCError.swift in Sources */,
+				FD4C727827909D1200C246B4 /* MealDBEndpoint.swift in Sources */,
 				FD043A542766DDE7006E0F6B /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,20 +22,20 @@ class MealTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setup(meal: Meal) {
-        mealTitleLabel.text = meal.strMeal
-        downloadImage(fromURL: meal.strMealThumb)
-    }
+//    func setup(meal: Meal) {
+//        mealTitleLabel.text = meal.strMeal
+//        downloadImage(fromURL: meal.strMealThumb)
+//    }
     override func prepareForReuse() {
         mealImageView.image = nil
         mealTitleLabel.text = ""
     }
-    func downloadImage(fromURL url: String) {
-        NetworkManager.shared.downloadImage(from: url) { [weak self] image in
-            guard let self = self else { return }
-            DispatchQueue.main.async {
-                self.mealImageView.image = image
-            }
-        }
-    }
+//    func downloadImage(fromURL url: String) {
+//        NetworkManagerWithGenerics.shared.downloadImage(from: url) { [weak self] image in
+//            guard let self = self else { return }
+//            DispatchQueue.main.async {
+//                self.mealImageView.image = image
+//            }
+//        }
+//    }
 }
