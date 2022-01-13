@@ -7,15 +7,11 @@
 
 import UIKit
 
-
-
-
 class NetworkManager {
     
-  static let shared = NetworkManager()
-    
-    private let baseURL = "https://www.themealdb.com/api/json/v1/1/"
-    private let cache   = NSCache<NSString, UIImage>()
+    static let shared     = NetworkManager()
+    private let baseURL  = "https://www.themealdb.com/api/json/v1/1/"
+    private let cache    = NSCache<NSString, UIImage>()
     
     private init() {}
     
@@ -135,6 +131,7 @@ class NetworkManager {
     
     
     func downloadImage(from urlString: String, completed: @escaping (UIImage?) -> Void) {
+        
         let cacheKey = NSString(string: urlString)
         
         if let image = cache.object(forKey: cacheKey) {

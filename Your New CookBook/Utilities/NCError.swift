@@ -13,6 +13,7 @@ enum ErrorMessages: Error {
     case invalidResponse
     case invalidData
 }
+
 extension ErrorMessages: LocalizedError {
     var errorDescription: String? {
         switch self {
