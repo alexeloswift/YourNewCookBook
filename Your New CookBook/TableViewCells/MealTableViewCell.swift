@@ -22,10 +22,10 @@ class MealTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-//    func setup(meal: Meal) {
-//        mealTitleLabel.text = meal.strMeal
+    func setup(meal: Meal) {
+        mealTitleLabel.text = meal.strMeal
 //        downloadImage(fromURL: meal.strMealThumb)
-//    }
+    }
     override func prepareForReuse() {
         mealImageView.image = nil
         mealTitleLabel.text = ""

@@ -62,7 +62,7 @@ extension MealViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MealTableViewCell.identifier, for: indexPath) as! MealTableViewCell
         
-//        cell.setup(meal: meal[indexPath.row])
+        cell.setup(meal: meal[indexPath.row])
         
         return cell
     }
