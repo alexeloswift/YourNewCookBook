@@ -9,6 +9,10 @@ import UIKit
 
 
 class CategoryViewController: UIViewController {
+    
+    enum Section: CaseIterable {
+        case main
+    }
 
     @IBOutlet var tableView:   UITableView!
    
@@ -16,24 +20,27 @@ class CategoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getCategories()
         
         let nib = UINib(nibName: CategoryTableViewCell.identifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: CategoryTableViewCell.identifier)
         
+        self.tableView.backgroundColor  = UIColor.systemBackground
+        self.tableView.isHidden         = true
         
-        NetworkManager.shared.getCategories() { [weak self] result in
-            
-            guard let self = self else { return }
-            
-            switch result {
-                
-            case .success(let categories):
-                self.updateUI(with: categories)
-                
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
+//        NetworkManagerWithGenerics.shared.getCategories() { [weak self] result in
+//
+//            guard let self = self else { return }
+//
+//            switch result {
+//
+//            case .success(let categories):
+//                self.updateUI(with: categories)
+//
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
     }
     
     func updateUI(with categories: CategoryAPIResponse) {
@@ -45,7 +52,26 @@ class CategoryViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
-}
+    
+    private func getCategories() {
+       
+        Task {
+            do {
+                let response: CategoryAPIResponse = try await NetworkManagerWithGenerics.shared.getRequest(endpoint: .categories())
+                updateUI(with: response)
+              
+            } catch {
+                print("Hi")
+//                if let ncError = error as? ErrorMessages {
+//                    presentNMAlert(title: "Something went wrong", message: ErrorMessages.rawValue, buttonTitle: "Ok")
+//                } else {
+//                    presentNMAlert(title: "Something went wrong", message: "Unable to complete task at this time. Please try again.", buttonTitle: "Ok")
+                }
+                
+            }
+        }
+    }
+
 
 
 extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
@@ -77,6 +103,7 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
 
         cell.backgroundColor = UIColor.clear
     }
+    
 }
 
 

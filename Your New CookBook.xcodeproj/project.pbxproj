@@ -25,6 +25,7 @@
 		FD4C7263278FDA9D00C246B4 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C7262278FDA9D00C246B4 /* CategoryModel.swift */; };
 		FD4C7265278FDABE00C246B4 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C7264278FDABE00C246B4 /* MealModel.swift */; };
 		FD4C7267278FDAD700C246B4 /* MealDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C7266278FDAD700C246B4 /* MealDetailsModel.swift */; };
+		FD7F159227916DB00026EF56 /* MealDBEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F159127916DB00026EF56 /* MealDBEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		FD4C7262278FDA9D00C246B4 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		FD4C7264278FDABE00C246B4 /* MealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
 		FD4C7266278FDAD700C246B4 /* MealDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsModel.swift; sourceTree = "<group>"; };
+		FD7F159127916DB00026EF56 /* MealDBEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				FD043A422765CF58006E0F6B /* NetworkManager.swift */,
+				FD7F159127916DB00026EF56 /* MealDBEndpoint.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				FD043A5F2767115E006E0F6B /* UIViewController + Extension.swift in Sources */,
 				FD4C7267278FDAD700C246B4 /* MealDetailsModel.swift in Sources */,
 				FD4C7263278FDA9D00C246B4 /* CategoryModel.swift in Sources */,
+				FD7F159227916DB00026EF56 /* MealDBEndpoint.swift in Sources */,
 				FD1EA63E2765AEF2007A8F0C /* MealDetailViewController.swift in Sources */,
 				FD1EA63A2765AEF2007A8F0C /* AppDelegate.swift in Sources */,
 				FD1EA63C2765AEF2007A8F0C /* SceneDelegate.swift in Sources */,
