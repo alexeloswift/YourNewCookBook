@@ -20,8 +20,6 @@ class CategoryViewController: UIViewController {
         let nib = UINib(nibName: CategoryTableViewCell.identifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: CategoryTableViewCell.identifier)
         
-        self.tableView.backgroundColor  = UIColor.systemBackground
-        self.tableView.isHidden         = true
         
         NetworkManager.shared.getCategories() { [weak self] result in
             
@@ -79,7 +77,6 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
 
         cell.backgroundColor = UIColor.clear
     }
-    
 }
 
 

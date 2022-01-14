@@ -9,13 +9,15 @@ import UIKit
 
 class NetworkManager {
     
-    static let shared     = NetworkManager()
+    static let shared    = NetworkManager()
     private let baseURL  = "https://www.themealdb.com/api/json/v1/1/"
     private let cache    = NSCache<NSString, UIImage>()
     
     private init() {}
     
-  
+    
+    //   FUNCTION TO GET CATEGORY DATA & DECODE JSON
+    
     func getCategories(completed: @escaping (Result<CategoryAPIResponse, ErrorMessages>) -> Void) {
         
         let endpoint = baseURL + "categories.php"
@@ -53,8 +55,10 @@ class NetworkManager {
         task.resume()
     }
     
+    //    FUNCTION TO GET MEAL DATA & DECODE JSON
     
     func getMeals(for category: String, completed: @escaping (Result<MealAPIResponse, ErrorMessages>) -> Void) {
+        
         let endpoint = baseURL + "filter.php?c=\(category)"
         
         guard let url = URL(string: endpoint) else {
@@ -91,8 +95,10 @@ class NetworkManager {
         task.resume()
     }
     
-   
+    //   FUNCTION TO GET MEAL DETAILS DATA & DECODE JSON
+    
     func getMealDetails(for mealID: String, completed: @escaping (Result<MealDetailsAPIResponse, ErrorMessages>) -> Void) {
+        
         let endpoint = baseURL + "lookup.php?i=\(mealID)"
         
         guard let url = URL(string: endpoint) else {
@@ -129,8 +135,11 @@ class NetworkManager {
         task.resume()
     }
     
+    //    FUNCTION TO GET IMAGE FROM URL & CACHE IT
     
     func downloadImage(from urlString: String, completed: @escaping (UIImage?) -> Void) {
+        
+        //     CHECKING IF IMAGE IS IN CACHE
         
         let cacheKey = NSString(string: urlString)
         
@@ -154,6 +163,8 @@ class NetworkManager {
                     completed(nil)
                     return
                 }
+            
+            //     PUTTING IMAGE IN CACHE
             
             self.cache.setObject(image, forKey: cacheKey)
             completed(image)

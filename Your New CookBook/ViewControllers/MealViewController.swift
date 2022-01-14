@@ -20,8 +20,7 @@ class MealViewController: UIViewController {
         let nib = UINib(nibName: MealTableViewCell.identifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: MealTableViewCell.identifier)
         
-        self.tableView.backgroundColor  = UIColor.systemBackground
-        self.tableView.isHidden         = true
+      
         
         NetworkManager.shared.getMeals(for: category) { [weak self] result in
             
@@ -43,7 +42,6 @@ class MealViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
-
 }
 
 extension MealViewController: UITableViewDelegate, UITableViewDataSource {
@@ -73,5 +71,4 @@ extension MealViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
-    
 }

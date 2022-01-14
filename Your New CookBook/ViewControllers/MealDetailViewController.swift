@@ -58,12 +58,17 @@ class MealDetailsViewController: UIViewController {
         DispatchQueue.main.async {
             self.item                   = meal.meals
             self.detailTitleLabel.text  = self.item.first?.strMeal
-            self.instructionsLabel.text = "Instructions: \(self.item.first?.strInstructions ?? "")"
             self.downloadImage(fromURL: self.item.first?.strMealThumb ?? "missing")
+            
+            self.instructionsLabel.text =
+            """
+             Instructions
+             \(self.item.first?.strInstructions ?? "")
+             """
             
             var getIngredients =
                 """
-                Ingredients:
+                Ingredients
                 \(self.item.first?.strIngredient1 ?? "") \(self.item.first?.strMeasure1 ?? ""), \
                 \(self.item.first?.strIngredient2 ?? "") \(self.item.first?.strMeasure2 ?? ""), \
                 \(self.item.first?.strIngredient3 ?? "") \(self.item.first?.strMeasure3 ?? ""), \
@@ -90,7 +95,6 @@ class MealDetailsViewController: UIViewController {
                 _ = getIngredients.popLast()
             }
             self.ingredientsLabel.text = getIngredients + "."
-            
             self.detailImageView.isHidden = false
             self.detailTitleLabel.isHidden = false
             self.instructionsLabel.isHidden = false
@@ -106,8 +110,6 @@ class MealDetailsViewController: UIViewController {
             }
         }
     }
-    
-
 }
     
 
