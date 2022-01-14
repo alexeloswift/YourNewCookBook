@@ -27,7 +27,6 @@ class MealViewController: UIViewController {
             guard let self = self else { return }
             
             switch result {
-                
             case .success(let meals): self.updateUI(with: meals)
                 
             case .failure(let error): print(error.localizedDescription)
