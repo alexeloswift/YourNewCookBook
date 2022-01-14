@@ -9,7 +9,7 @@ import UIKit
 
 class MealViewController: UIViewController {
 
-    @IBOutlet weak var tableView:   UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     var meal = [Meal]()
     var category: String = ""

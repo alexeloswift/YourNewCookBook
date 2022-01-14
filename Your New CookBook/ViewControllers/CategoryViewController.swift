@@ -10,7 +10,7 @@ import UIKit
 
 class CategoryViewController: UIViewController {
 
-    @IBOutlet var tableView:   UITableView!
+    @IBOutlet var tableView: UITableView!
    
     var category = [Category]()
     
@@ -55,7 +55,7 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
         let controller      = MealViewController.instantiate()
         let model           = category[indexPath.row]
         controller.category = model.strCategory
-        controller.title    = model.strCategory + " list"
+        controller.title    = model.strCategory + " Options"
         navigationController?.pushViewController(controller, animated: true)
     }
     
